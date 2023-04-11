@@ -3,10 +3,11 @@ import numpy as np
 from collections import deque
 from keras.models import Sequential
 from keras.layers import Dense
-from tensorflow.keras.optimizers import Adam
+from keras.optimizers import Adam
 from keras import backend as K
 import os
 import random
+
 
 class DQNAgent:
 
@@ -19,42 +20,39 @@ class DQNAgent:
         self.learning_step = 0
         self.temperature_schedule = 0.5
 
-        self.epsilon = 1.0 #exploration rate, perlu exploration karena DRL bisa evolve over time dan bisa ada informasi yang enggak ke cover
+        self.epsilon = 1.0  # exploration rate, perlu exploration karena DRL bisa evolve over time dan bisa ada informasi yang enggak ke cover
         self.epsilon_decay = 0.995 # decay our epsilon so we slowly shift our agent from exploring at random to exploiting the knowledge that it is learned
-        self.epsilon_min = 0.01 #Kalo ke decay terus dibuat bates minimum biar setidaknya bisa eksplorasi
+        self.epsilon_min = 0.01 # Kalo ke decay terus dibuat bates minimum biar setidaknya bisa eksplorasi
         self.replace_target_freq = 2000
         self.eval_network = self.build_model()
         self.target_network = self.build_model()
         self.update_target_weights()
 
-    def huber_loss(self, y_true, y_predict, delta=1.0):
+    def huber_loss(self, y_true, y_predict, delta=1.0): #y_true = Ground Truth Values (batch_size, d0, dN) y_pred = Value yang diprediksi, bentuknya sama kayak y_true
         err = y_true - y_predict
-        cond = K.abs(err) <= delta
+        cond = K.abs(err) <= delta #Delta adalah poin di mana fungsi huber loss berubah dari kuadratik ke linear
 
-        L1 = 0.5 * K.square(err)
-        L2 = delta*K.abs(err) - 0.5*delta**2
+        L1 = 0.5 * K.square(err) #L1 untuk nilai error kecil
+        L2 = delta*K.abs(err) - 0.5*delta**2 #L2 untuk nilai error absolut
         return K.mean(tf.where(cond, L1, L2))
 
     def build_model(self):
         model = Sequential()
-        model.add(Dense(24, input_dim = self.state_size, activation='relu'))
+        model.add(Dense(24, input_dim=self.state_size, activation='relu'))
         model.add(Dense(24, activation='relu'))
         model.add(Dense(self.action_size, activation='linear'))
-        model.compile(loss='mse', optimizer=Adam(lr=self.learning_rate)) # Bisa ganti huber loss buat ganti mse
+        model.compile(loss='mse', optimizer=Adam(lr=self.learning_rate))  # Bisa ganti huber loss buat ganti mse
         return model
 
     def update_target_weights(self):
         self.target_network.set_weights(self.eval_network.get_weights())
 
     def act(self, state):
-        # Untuk boltzman exploration
-        action_values = self.eval_network.predict(state[np.newaxis, :])
+        action_values = self.eval_network.predict(state[np.newaxis, :]) # Untuk boltzman exploration
         exp_probabilities = np.exp(action_values / self.temperature_schedule)
         probabilities = exp_probabilities / np.sum(exp_probabilities)
-        # choose actions according to the probabilities
-        action = np.random.choice(range(self.action_size), p=probabilities[0])
-        #print(probabilities[0], action)
-        return action
+        action = np.random.choice(range(self.action_size), p=probabilities[0]) # choose actions according to the probabilities
+        return action #print(probabilities[0], action)
         '''
         # Untuk epsilon greedy
         if np.random.rand() <= self.epsilon:
@@ -75,9 +73,11 @@ class DQNAgent:
 
         eval_next = self.eval_network.predict(states_next)
         target_next = self.target_network.predict(states_next)
-        discounted_rewards = self.gamma * target_next[rows, np.argmax(eval_next, axis=1)] #ada 256 data (ngikut batch) tiap array/agent
+        # ada 256 data (ngikut batch) tiap array/agent
+        discounted_rewards = self.gamma * \
+            target_next[rows, np.argmax(eval_next, axis=1)]
 
-        y = self.eval_network.predict(states) #target
+        y = self.eval_network.predict(states)  # target
 
         if not any(action is None for action in actions):
             y[rows, actions] = rewards
