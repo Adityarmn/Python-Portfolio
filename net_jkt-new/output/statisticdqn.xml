@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-03-07 16:01:11 by Eclipse SUMO sumo Version 1.14.1
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="net_jkt-new/jkt-new.net.xml"/>
+        <route-files value="net_jkt-new/jkt-new.rou.xml"/>
+        <additional-files value="net_jkt-new/jkt-new.add.xml"/>
+    </input>
+
+    <output>
+        <summary-output value="net_jkt-new/output/summarydqn.xml"/>
+        <tripinfo-output value="net_jkt-new/output/tripinfodqn.xml"/>
+        <statistic-output value="net_jkt-new/output/statisticdqn.xml"/>
+    </output>
+
+    <time>
+        <begin value=" 21600"/>
+        <end value="82800"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="-1"/>
+        <waiting-time-memory value="10000"/>
+        <max-depart-delay value="100000"/>
+    </processing>
+
+    <report>
+        <no-warnings value="true"/>
+        <duration-log.disable value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="56127"/>
+    </traci_server>
+
+    <random_number>
+        <random value="true"/>
+    </random_number>
+
+    <gui_only>
+        <gui-settings-file value="net_jkt-new/guisettings.cfg"/>
+    </gui_only>
+
+</configuration>

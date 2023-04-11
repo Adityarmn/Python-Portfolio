@@ -1,0 +1,34 @@
+<additional>
+  <laneData id="dqn" file="output/lane-data.xml" freq="300" writeAttributes ="laneDensity entered departed left arrived " /> 
+  <timedEvent type="SaveTLSStates" source="tl_1" dest="output/phase_tl_1.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_2" dest="output/phase_tl_2.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_3" dest="output/phase_tl_3.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_4" dest="output/phase_tl_4.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_5" dest="output/phase_tl_5.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_6" dest="output/phase_tl_6.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_7" dest="output/phase_tl_7.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_8" dest="output/phase_tl_8.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_9" dest="output/phase_tl_9.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_10" dest="output/phase_tl_10.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_11" dest="output/phase_tl_11.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_12" dest="output/phase_tl_12.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_13" dest="output/phase_tl_13.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_14" dest="output/phase_tl_14.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_15" dest="output/phase_tl_15.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_16" dest="output/phase_tl_16.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_17" dest="output/phase_tl_17.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_18" dest="output/phase_tl_18.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_19" dest="output/phase_tl_19.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_20" dest="output/phase_tl_20.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_21" dest="output/phase_tl_21.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_22" dest="output/phase_tl_22.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_23" dest="output/phase_tl_23.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_24" dest="output/phase_tl_24.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_25" dest="output/phase_tl_25.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_26" dest="output/phase_tl_26.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_27" dest="output/phase_tl_27.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_28" dest="output/phase_tl_28.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_29" dest="output/phase_tl_29.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_30" dest="output/phase_tl_30.xml"/>
+  <timedEvent type="SaveTLSStates" source="tl_31" dest="output/phase_tl_31.xml"/> 
+  </additional>

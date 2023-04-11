@@ -1,0 +1,17 @@
+<configuration>
+    <input>
+        <net-file value="jkt-new.net.xml"/>
+        <route-files value="jkt-new.rou.xml"/>
+	    <additional-files value="jkt-new.add.xml"/>
+        <gui-settings-file value="guisettings.cfg"/>
+    </input>
+    <time>
+        <begin value="21600"/>
+        <end value="82800"/>
+    </time>
+    <output>
+        <summary value = "output/summarydqn.xml"/>
+        <tripinfo-output value = "output/tripinfodqn.xml"/>
+        <statistic-output value = "output/statisticdqn.xml"/>
+    </output>
+</configuration>
