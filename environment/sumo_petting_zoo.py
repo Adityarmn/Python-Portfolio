@@ -12,17 +12,17 @@ else:
     raise ImportError("Please declare the environment variable 'SUMO_HOME'")
 
 
-import gymnasium as gym
+import gym 
 import numpy as np
 import pandas as pd
 import sumolib
 import traci
-from gymnasium.utils import EzPickle, seeding
+from gym.utils import EzPickle, seeding
 from pettingzoo import AECEnv
 from pettingzoo.utils import agent_selector, wrappers
 from pettingzoo.utils.conversions import parallel_wrapper_fn
 
-from traffic_signal_v2 import TrafficSignal
+from environment.traffic_signal_v2 import TrafficSignal
 from environment.sumo_environment import SumoEnvironment
 
 LIBSUMO = "LIBSUMO_AS_TRACI" in os.environ

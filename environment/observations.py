@@ -2,9 +2,8 @@
 from abc import abstractmethod
 
 import numpy as np
-from gymnasium import spaces
-
-from traffic_signal_v2 import TrafficSignal
+from gym import spaces
+from environment.traffic_signal_v2 import TrafficSignal
 
 
 class ObservationFunction:

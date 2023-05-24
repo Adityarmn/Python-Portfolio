@@ -10,7 +10,7 @@ if "SUMO_HOME" in os.environ:
 else:
     raise ImportError("Please declare the environment variable 'SUMO_HOME'")
 import numpy as np
-from gymnasium import spaces
+from gym import spaces
 import math
 
 from networkdata import NetworkData
