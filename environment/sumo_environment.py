@@ -26,6 +26,15 @@ from environment.observations import ObservationFunction,DefaultObservationFunct
 
 from environment.traffic_signal_v2 import TrafficSignal
 
+from environment.sumo_petting_zoo import SumoPettingZoo
+
+def env(**kwargs):
+    env = SumoPettingZoo(**kwargs)
+    env = wrappers.AssertOutOfBoundsWrapper(env)
+    env = wrappers.OrderEnforcingWrapper(env)
+    return env
+
+parallel_env = parallel_wrapper_fn(env)
 
 LIBSUMO = "LIBSUMO_AS_TRACI" in os.environ
 
