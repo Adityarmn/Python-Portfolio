@@ -27,23 +27,15 @@ from environment.sumo_environment import SumoEnvironment
 
 LIBSUMO = "LIBSUMO_AS_TRACI" in os.environ
 
-def env(**kwargs):
-    env = SumoPettingZoo(**kwargs)
-    env = wrappers.AssertOutOfBoundsWrapper(env)
-    env = wrappers.OrderEnforcingWrapper(env)
-    return env
-
-parallel_env = parallel_wrapper_fn(env)
-
-def env(**kwargs):
-    """Instantiate a PettingoZoo environment."""
-    env = SumoPettingZoo(**kwargs)
-    env = wrappers.AssertOutOfBoundsWrapper(env)
-    env = wrappers.OrderEnforcingWrapper(env)
-    return env
+# def env(**kwargs):
+#     """Instantiate a PettingoZoo environment."""
+#     env = SumoPettingZoo(**kwargs)
+#     env = wrappers.AssertOutOfBoundsWrapper(env)
+#     env = wrappers.OrderEnforcingWrapper(env)
+#     return env
 
 
-parallel_env = parallel_wrapper_fn(env)
+# parallel_env = parallel_wrapper_fn(env)
 
 
 class SumoPettingZoo(AECEnv, EzPickle):
