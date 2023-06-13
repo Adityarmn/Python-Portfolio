@@ -17,24 +17,11 @@ import numpy as np
 import pandas as pd
 import sumolib
 import traci
-from gym.utils import EzPickle, seeding
-# from pettingzoo import AECEnv
-# from pettingzoo.utils import agent_selector, wrappers
-# from pettingzoo.utils.conversions import parallel_wrapper_fn
+
 
 from environment.observations import ObservationFunction,DefaultObservationFunction
 
 from environment.traffic_signal_v2 import TrafficSignal
-
-# from environment.sumo_petting_zoo import SumoPettingZoo
-
-# def env(**kwargs):
-#     env = SumoPettingZoo(**kwargs)
-#     env = wrappers.AssertOutOfBoundsWrapper(env)
-#     env = wrappers.OrderEnforcingWrapper(env)
-#     return env
-
-# parallel_env = parallel_wrapper_fn(env)
 
 LIBSUMO = "LIBSUMO_AS_TRACI" in os.environ
 
@@ -85,11 +72,11 @@ class SumoEnvironment(gym.Env):
         cfg_file: str,
         out_csv_name: str,
         use_gui: bool = False,
-        virtual_display: Tuple[int, int] = (3200, 1800),
-        begin_time: int = 28800,
-        num_seconds: int = 29700,
-        max_depart_delay: int = 100000,
-        waiting_time_memory: int = 1000,
+        virtual_display: Tuple[int, int] = (3200, 1800), # Tuples are used to store multiple items in a single variable
+        begin_time: int = 8*3600,
+        num_seconds: int = 9*3600,
+        max_depart_delay: int = 100000, # waktu maksimal buat kendaraan delay, setelah itu diabaikan
+        waiting_time_memory: int = 1000, # macet euy
         time_to_teleport: int = -1,
         delta_time: int = 5,
         yellow_time: int = 2,
@@ -105,6 +92,8 @@ class SumoEnvironment(gym.Env):
         sumo_warnings: bool = True,
         additional_sumo_cmd: Optional[str] = None,
         render_mode: Optional[str] = None,
+        alpha = 1,
+        density = 1
     ) -> None:
         """Initialize the environment."""
         assert render_mode is None or render_mode in self.metadata["render_modes"], "Invalid render mode."
@@ -114,7 +103,7 @@ class SumoEnvironment(gym.Env):
 
         self._net = net_file
         self._route = route_file
-        self._cfg = cfg_file
+        self._cfg = cfg_file # cfg = configuration
         self.use_gui = use_gui
         if self.use_gui or self.render_mode is not None:
             self._sumo_binary = sumolib.checkBinary("sumo-gui")
@@ -143,6 +132,8 @@ class SumoEnvironment(gym.Env):
         self.label = str(SumoEnvironment.CONNECTION_LABEL)
         SumoEnvironment.CONNECTION_LABEL += 1
         self.sumo = None
+        self.alpha = alpha
+        self.density = density
 
         if LIBSUMO:
             traci.start([sumolib.checkBinary("sumo"), "-n", self._net])  # Start only to retrieve traffic light information
@@ -166,6 +157,8 @@ class SumoEnvironment(gym.Env):
                     self.begin_time,
                     self.reward_fn[ts],
                     conn,
+                    self.alpha,
+                    self.density
                 )
                 for ts in self.reward_fn.keys()
             }
@@ -181,6 +174,8 @@ class SumoEnvironment(gym.Env):
                     self.begin_time,
                     self.reward_fn,
                     conn,
+                    self.alpha,
+                    self.density
                 )
                 for ts in self.ts_ids
             }
@@ -225,12 +220,6 @@ class SumoEnvironment(gym.Env):
             sumo_cmd.extend(["--start", "--quit-on-end"])
             if self.render_mode == "rgb_array":
                 sumo_cmd.extend(["--window-size", f"{self.virtual_display[0]},{self.virtual_display[1]}"])
-                
-
-                print("Creating a virtual display.")
-                self.disp = SmartDisplay(size=self.virtual_display)
-                self.disp.start()
-                print("Virtual display started.")
 
         if LIBSUMO:
             traci.start(sumo_cmd)
@@ -268,6 +257,8 @@ class SumoEnvironment(gym.Env):
                     self.begin_time,
                     self.reward_fn[ts],
                     self.sumo,
+                    self.alpha,
+                    self.density
                 )
                 for ts in self.reward_fn.keys()
             }
@@ -283,6 +274,8 @@ class SumoEnvironment(gym.Env):
                     self.begin_time,
                     self.reward_fn,
                     self.sumo,
+                    self.alpha,
+                    self.density
                 )
                 for ts in self.ts_ids
             }
@@ -376,21 +369,21 @@ class SumoEnvironment(gym.Env):
         )
         return {ts: self.rewards[ts] for ts in self.rewards.keys() if self.traffic_signals[ts].time_to_act}
 
-    @property
-    def observation_space(self):
-        """Return the observation space of a traffic signal.
+    # @property
+    # def observation_space(self):
+    #     """Return the observation space of a traffic signal.
 
-        Only used in case of single-agent environment.
-        """
-        return self.traffic_signals[self.ts_ids[0]].observation_space
+    #     Only used in case of single-agent environment.
+    #     """
+    #     return self.traffic_signals[self.ts_ids[0]].observation_space
 
-    @property
-    def action_space(self):
-        """Return the action space of a traffic signal.
+    # @property
+    # def action_space(self):
+    #     """Return the action space of a traffic signal.
 
-        Only used in case of single-agent environment.
-        """
-        return self.traffic_signals[self.ts_ids[0]].action_space
+    #     Only used in case of single-agent environment.
+    #     """
+    #     return self.traffic_signals[self.ts_ids[0]].action_space
 
     def observation_spaces(self, ts_id: str):
         """Return the observation space of a traffic signal."""
@@ -402,7 +395,7 @@ class SumoEnvironment(gym.Env):
 
     def _sumo_step(self):
         self.sumo.simulationStep()
-    # Perlu diganti
+        
     def _get_system_info(self):
         vehicles = self.sumo.vehicle.getIDList()
         speeds = [self.sumo.vehicle.getSpeed(vehicle) for vehicle in vehicles]
@@ -452,9 +445,9 @@ class SumoEnvironment(gym.Env):
 
         self.sumo = None
 
-    def __del__(self):
-        """Close the environment and stop the SUMO simulation."""
-        self.close()
+    # def __del__(self):
+    #     """Close the environment and stop the SUMO simulation."""
+    #     self.close()
 
     def render(self):
         """Render the environment.

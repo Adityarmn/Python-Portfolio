@@ -1,5 +1,5 @@
-import sys, subprocess, os
-import inspect
+import sys, os
+import numpy as np
 
 if 'SUMO_HOME' in os.environ:
     tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
@@ -18,8 +18,6 @@ except ImportError:
     sys.exit("please declare environment variable 'SUMO_HOME' as the root directory of your sumo installation (it should contain folders 'bin', 'tools' and 'docs')")
 '''
 
-import numpy as np
-import traci
 
 class NetworkData:
     def __init__(self, net_fp):

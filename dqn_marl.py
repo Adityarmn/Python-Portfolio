@@ -5,13 +5,11 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.optimizers import Adam
 from keras import backend as K
-import os
 import random
-
 
 class DQNAgent:
 
-    def __init__(self, state_size, action_size):
+    def __init__(self, state_size, action_size): 
         self.state_size = state_size
         self.action_size = action_size
 
@@ -48,20 +46,21 @@ class DQNAgent:
         self.target_network.set_weights(self.eval_network.get_weights())
 
     def act(self, state):
+        '''
         action_values = self.eval_network.predict(state[np.newaxis, :]) # Untuk boltzman exploration
         exp_probabilities = np.exp(action_values / self.temperature_schedule)
         probabilities = exp_probabilities / np.sum(exp_probabilities)
+        probabilities = np.nan_to_num(probabilities)
         action = np.random.choice(range(self.action_size), p=probabilities[0]) # choose actions according to the probabilities
         return action #print(probabilities[0], action)
         '''
-        # Untuk epsilon greedy
+        
+        #Untuk epsilon greedy
         if np.random.rand() <= self.epsilon:
             return random.randrange(self.action_size) #eksplorasi
         else:
             action_probs = self.eval_network.predict(state[np.newaxis, :])
-            #print(action_probs, np.argmax(action_probs[0])) hasil: [[-3.6568227  -2.6656322  -0.97574604 -2.9777777 ]] 2
             return np.argmax(action_probs[0])
-        '''
 
     def replay(self, states, actions, rewards, states_next, done):
 

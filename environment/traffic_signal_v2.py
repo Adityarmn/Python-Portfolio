@@ -2,6 +2,9 @@
 import os
 import sys
 from typing import Callable, List, Union
+import numpy as np
+from gym import spaces
+import math
 
 
 if "SUMO_HOME" in os.environ:
@@ -9,9 +12,6 @@ if "SUMO_HOME" in os.environ:
     sys.path.append(tools)
 else:
     raise ImportError("Please declare the environment variable 'SUMO_HOME'")
-import numpy as np
-from gym import spaces
-import math
 
 from networkdata import NetworkData
 nd = NetworkData('net_jkt-new/jkt-new.net.xml')
@@ -60,6 +60,8 @@ class TrafficSignal:
         begin_time: int,
         reward_fn: Union[str, Callable],
         sumo,
+        alpha,
+        density
     ):
         """Initializes a TrafficSignal object.
 
@@ -88,6 +90,8 @@ class TrafficSignal:
         self.last_reward = None
         self.reward_fn = reward_fn
         self.sumo = sumo
+        self.alpha = alpha
+        self.density = density
 
         self.density_in_maxflow = 1#veh/km
         if type(self.reward_fn) is str:
@@ -105,7 +109,7 @@ class TrafficSignal:
         )  # Remove duplicates and keep order
         self.out_lanes = [link[0][1] for link in self.sumo.trafficlight.getControlledLinks(self.id) if link]
         self.out_lanes = list(set(self.out_lanes))
-        self.lanes_lenght = {lane: self.sumo.lane.getLength(lane) for lane in self.lanes + self.out_lanes}
+        self.lanes_length = {lane: self.sumo.lane.getLength(lane) for lane in self.lanes + self.out_lanes}
         self.out_lanes_length = {lane: self.sumo.lane.getLength(lane) for lane in self.out_lanes} # out coming lanes
         self.mp_lanes = self.max_pressure_lanes()
 
@@ -191,9 +195,9 @@ class TrafficSignal:
     def compute_reward(self):
         """Computes the reward of the traffic signal."""
         #self.last_reward = self._waiting_time_reward()
-        self.last_reward = self._pressure_reward()
-        #self.last_reward = -(0.5*self._weight_reward() + 0.5*self._new_queue_reward())
-        #self.last_reward = self.exponential_reward()
+        #self.last_reward = self._pressure_reward()
+        #self.last_reward = -(0.5*self._weight_reward() + 0.5*self._new_queue_reward()) #konstanta 
+        self.last_reward = self.exponential_reward()
         return self.last_reward
 
     def _pressure_reward(self):
@@ -288,7 +292,7 @@ class TrafficSignal:
         """Returns the density of the vehicles in the outgoing lanes of the intersection."""
         lanes_density = [
             self.sumo.lane.getLastStepVehicleNumber(lane)
-            / (self.lanes_lenght[lane] / (self.MIN_GAP + self.sumo.lane.getLastStepLength(lane)))
+            / (self.lanes_length[lane] / (self.MIN_GAP + self.sumo.lane.getLastStepLength(lane)))
             for lane in self.out_lanes
         ]
         return [min(1, density) for density in lanes_density]
@@ -300,7 +304,7 @@ class TrafficSignal:
         """
         lanes_density = [
             self.sumo.lane.getLastStepVehicleNumber(lane)
-            / (self.lanes_lenght[lane] / (self.MIN_GAP + self.sumo.lane.getLastStepLength(lane)))
+            / (self.lanes_length[lane] / (self.MIN_GAP + self.sumo.lane.getLastStepLength(lane)))
             for lane in self.lanes
         ]
         return [min(1, density) for density in lanes_density]
@@ -312,7 +316,7 @@ class TrafficSignal:
         """
         lanes_queue = [
             self.sumo.lane.getLastStepHaltingNumber(lane)
-            / (self.lanes_lenght[lane] / (self.MIN_GAP + self.sumo.lane.getLastStepLength(lane)))
+            / (self.lanes_length[lane] / (self.MIN_GAP + self.sumo.lane.getLastStepLength(lane)))
             for lane in self.lanes
         ]
         return [min(1, queue) for queue in lanes_queue]
@@ -377,7 +381,7 @@ class TrafficSignal:
                 phase_lanes[a] = list(set(pure_green))
         return phase_lanes
 
-    def get_pressure2(self): #get weight = pressure/lane lenght
+    def get_pressure2(self): #get weight = pressure/lane length
         mp_lanes = self.max_pressure_lanes() #inc & out lanes for each phase
         pressure = {}
         for phase in mp_lanes:
@@ -401,7 +405,7 @@ class TrafficSignal:
             in_out_lanes = self.mp_lanes[phase]
             inc_lanes = in_out_lanes['inc']
             #get density
-            density[phase] = math.ceil(sum([min(1, self.sumo.lane.getLastStepVehicleNumber(lane) / (self.lanes_lenght[lane] / vehicle_size_min_gap)) for lane in inc_lanes]))
+            density[phase] = math.ceil(sum([min(1, self.sumo.lane.getLastStepVehicleNumber(lane) / (self.lanes_length[lane] / vehicle_size_min_gap)) for lane in inc_lanes]))
         state_density = list(density.values())
         return state_density
 
@@ -418,14 +422,14 @@ class TrafficSignal:
         return state_density
 
     def get_state_queue_in(self): #incoming lanes
-        #mp_lanes = self.max_pressure_lanes() #inc & out lanes for each phase
+        # mp_lanes = self.max_pressure_lanes() #inc & out lanes for each phase
         vehicle_size_min_gap = 3 + 2.5  # 3(vehSize) + 2.5(minGap)
         queue = {}
         for phase in self.mp_lanes:
             in_out_lanes = self.mp_lanes[phase]
             inc_lanes = in_out_lanes['inc']
             #get queue
-            queue[phase] = math.ceil(sum([min(1, self.sumo.lane.getLastStepHaltingNumber(lane) / (self.lanes_lenght[lane] / vehicle_size_min_gap)) for lane in inc_lanes]))
+            queue[phase] = math.ceil(sum([min(1, self.sumo.lane.getLastStepHaltingNumber(lane) / (self.lanes_length[lane] / vehicle_size_min_gap)) for lane in inc_lanes]))
         state_queue = list(queue.values())
         return state_queue
 
@@ -455,8 +459,7 @@ class TrafficSignal:
         density = self.get_network_density()
         pressure = self.get_pressure2()
         queue = self.get_total_queued()
-        alpha = 0.0277
-        reward = -(pressure*(math.exp(-alpha*density)) + queue*(1-math.exp(-alpha*density)))
+        reward = -(pressure*(math.exp(-self.alpha*self.density)) + queue*(1-math.exp(-self.alpha*self.density)))
         return reward
 
 

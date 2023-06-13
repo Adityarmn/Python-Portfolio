@@ -1,8 +1,7 @@
 """SUMO Environment for Traffic Signal Control."""
 import os
 import sys
-from pathlib import Path
-from typing import Callable, Optional, Tuple, Union
+from typing import Optional
 
 
 if "SUMO_HOME" in os.environ:
@@ -12,30 +11,15 @@ else:
     raise ImportError("Please declare the environment variable 'SUMO_HOME'")
 
 
-import gym 
-import numpy as np
-import pandas as pd
-import sumolib
-import traci
+
 from gym.utils import EzPickle, seeding
 from pettingzoo import AECEnv
-from pettingzoo.utils import agent_selector, wrappers
-from pettingzoo.utils.conversions import parallel_wrapper_fn
+from pettingzoo.utils import agent_selector
 
-from environment.traffic_signal_v2 import TrafficSignal
+
 from environment.sumo_environment import SumoEnvironment
 
 LIBSUMO = "LIBSUMO_AS_TRACI" in os.environ
-
-# def env(**kwargs):
-#     """Instantiate a PettingoZoo environment."""
-#     env = SumoPettingZoo(**kwargs)
-#     env = wrappers.AssertOutOfBoundsWrapper(env)
-#     env = wrappers.OrderEnforcingWrapper(env)
-#     return env
-
-
-# parallel_env = parallel_wrapper_fn(env)
 
 
 class SumoPettingZoo(AECEnv, EzPickle):

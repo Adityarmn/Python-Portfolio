@@ -5,6 +5,7 @@ import numpy as np
 from gym import spaces
 from environment.traffic_signal_v2 import TrafficSignal
 
+#ts = traffic signal
 
 class ObservationFunction:
     """Abstract base class for observation functions."""
