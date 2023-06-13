@@ -15,8 +15,6 @@ x2 = [10, 15, 18, 15, 30, 19, 40, 41, 31, 29]
 vx1 = [random.random() for i in range(10)]
 vx2 = [random.random() for i in range(10)]
 
-
-
 allpbest = []
 
 for nilai_partikel in range(10):
