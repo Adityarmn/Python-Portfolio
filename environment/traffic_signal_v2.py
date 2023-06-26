@@ -194,9 +194,6 @@ class TrafficSignal:
 
     def compute_reward(self):
         """Computes the reward of the traffic signal."""
-        #self.last_reward = self._waiting_time_reward()
-        #self.last_reward = self._pressure_reward()
-        #self.last_reward = -(0.5*self._weight_reward() + 0.5*self._new_queue_reward()) #konstanta 
         self.last_reward = self.exponential_reward()
         return self.last_reward
 

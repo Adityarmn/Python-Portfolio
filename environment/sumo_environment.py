@@ -369,22 +369,6 @@ class SumoEnvironment(gym.Env):
         )
         return {ts: self.rewards[ts] for ts in self.rewards.keys() if self.traffic_signals[ts].time_to_act}
 
-    # @property
-    # def observation_space(self):
-    #     """Return the observation space of a traffic signal.
-
-    #     Only used in case of single-agent environment.
-    #     """
-    #     return self.traffic_signals[self.ts_ids[0]].observation_space
-
-    # @property
-    # def action_space(self):
-    #     """Return the action space of a traffic signal.
-
-    #     Only used in case of single-agent environment.
-    #     """
-    #     return self.traffic_signals[self.ts_ids[0]].action_space
-
     def observation_spaces(self, ts_id: str):
         """Return the observation space of a traffic signal."""
         return self.traffic_signals[ts_id].observation_space
