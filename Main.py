@@ -1,11 +1,10 @@
-from Simulasi import training, validasi
+from Simulasi import validasi
 beta = 0.0027
 density = 25
 time_start = 8
-time_end = 8.1
-runs = 10
+time_end = 8.05
+runs = 1
 validasi(beta, density, time_start, time_end, runs)
-training(beta, density, time_start, time_end, runs)
 
 # # Menentukan area-area di MFD (L1, L2, L3, L4)
 # import numpy as np

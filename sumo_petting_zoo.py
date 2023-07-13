@@ -91,8 +91,8 @@ class SumoPettingZoo(AECEnv, EzPickle):
         return self.env.render(mode)
 
     def save_csv(self, out_csv_name, episode):
-        """Save metrics of the simulation to a .csv file."""
-        self.env.save_csv(out_csv_name, episode)
+        """Save metrics of the simulation to a .xml file."""
+        return self.env.save_csv(out_csv_name, episode)
 
     def step(self, action):
         """Step the environment."""
