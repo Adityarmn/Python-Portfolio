@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from Simulasi import validasi, J
+from Simulasi import simulasi
+from Objective import objective_function
+from MFD import MFD
 
 
 max_iteration = 100
@@ -20,7 +22,7 @@ vx1 = np.random.rand(1,jumlah_partikel)[0]
 vx2 = np.random.rand(1,jumlah_partikel)[0]
 
 #Cari Objective Function
-objective = J
+objective = [0 for i in range(jumlah_partikel)]
 index_terbaik = np.argmin(objective)
 
 pbest = np.array([x1,x2])
@@ -44,22 +46,23 @@ while True:
 	x2_next = x_next[1,:]
 	for i in range(jumlah_partikel):
 		# objective_next[i] = validasi(beta=0.5, density=0.1, time_start=x1_next[i], time_end=x2_next[i])
-		objective_next[i] = validasi(beta=[i],density=[i], time_start=6*3600, time_end=23*3600) #nanti x1 x2 diganti beta sama density
-	# exit()
+		simulasi(beta=[i],density=[i], time_start=6*3600, time_end=23*3600) #nanti x1 x2 diganti beta sama density
+		Qpeak, Kpeak, Qgridlock, Kgridlock = MFD()
+		objective_next[i] = objective_function(Qpeak, Kpeak, Qgridlock, Kgridlock)
 
     
 
 	#objective_next = (x1_next-3.14)**2 + (x2_next-2.72)**2 + np.sin(3*x1_next+1.41) + np.sin(4*x2_next-1.73)
 	
 	for j in range(jumlah_partikel):
-		if objective_next[j] < objective[j]:
+		if objective_next[j] > objective[j]:
 			pbest[0,j] = x1_next[j]
 			pbest[1,j] = x2_next[j]
 		else:
 			None
 			
 	objective = objective_next
-	index_terbaik = np.argmin(objective_next)
+	index_terbaik = np.argmax(objective_next)
 	gbest = np.array([[pbest[0,index_terbaik]],[pbest[1,index_terbaik]]]) # ambil nilai komponen kolom ke index terbaik dan seluruh baris
 
 	v = v_next
@@ -73,37 +76,37 @@ while True:
 	
 	iter = iter + 1
 
-def f(x,y):
-    "Objective function"
-    return J
+# def f(x,y):
+#     "Objective function"
+#     return J
     
-# Compute and plot the function in 3D within [0,5]x[0,5]
-x_mesh, y_mesh = np.array(np.meshgrid(np.linspace(0,5,100), np.linspace(0,5,100)))
-z_mesh = f(x_mesh, y_mesh)
+# # Compute and plot the function in 3D within [0,5]x[0,5]
+# x_mesh, y_mesh = np.array(np.meshgrid(np.linspace(0,5,100), np.linspace(0,5,100)))
+# z_mesh = f(x_mesh, y_mesh)
 
-# Find the global minimum
-x_min = x_mesh.ravel()[z_mesh.argmin()]
-y_min = y_mesh.ravel()[z_mesh.argmin()]
+# # Find the global minimum
+# x_min = x_mesh.ravel()[z_mesh.argmin()]
+# y_min = y_mesh.ravel()[z_mesh.argmin()]
 
 
-# Set up base figure: The contour map
-fig, ax = plt.subplots(figsize=(8,6))
-fig.set_tight_layout(True)
-img = ax.imshow(z_mesh, extent=[0, 5, 0, 5], origin='lower', cmap='viridis', alpha=0.4)
-fig.colorbar(img, ax=ax)
-ax.plot([x_min], [y_min], marker='x', markersize=5, color="white")
-contours = ax.contour(x_mesh, y_mesh, z_mesh, 10, colors='black', alpha=0.3)
-ax.clabel(contours, inline=True, fontsize=8, fmt="%.0f")
-ax.set_xlim([0,5])
-ax.set_ylim([0,5])
-pbest_plot = ax.scatter(pbest[0,:], pbest[1,:], marker='o', color='black', alpha=0.4)
-p_plot = ax.scatter(x[0,:], x[1,:], marker='o', color='blue', alpha=0.5)
-p_arrow = ax.quiver(x[0,:], x[1,:], v[0,:], v[1,:], color='blue', width=0.005, angles='xy', scale_units='xy', scale=1)
-gbest_plot = plt.scatter([gbest[0,:]], [gbest[1,:]], marker='*', s=100, color='black', alpha=0.4)
+# # Set up base figure: The contour map
+# fig, ax = plt.subplots(figsize=(8,6))
+# fig.set_tight_layout(True)
+# img = ax.imshow(z_mesh, extent=[0, 5, 0, 5], origin='lower', cmap='viridis', alpha=0.4)
+# fig.colorbar(img, ax=ax)
+# ax.plot([x_min], [y_min], marker='x', markersize=5, color="white")
+# contours = ax.contour(x_mesh, y_mesh, z_mesh, 10, colors='black', alpha=0.3)
+# ax.clabel(contours, inline=True, fontsize=8, fmt="%.0f")
+# ax.set_xlim([0,5])
+# ax.set_ylim([0,5])
+# pbest_plot = ax.scatter(pbest[0,:], pbest[1,:], marker='o', color='black', alpha=0.4)
+# p_plot = ax.scatter(x[0,:], x[1,:], marker='o', color='blue', alpha=0.5)
+# p_arrow = ax.quiver(x[0,:], x[1,:], v[0,:], v[1,:], color='blue', width=0.005, angles='xy', scale_units='xy', scale=1)
+# gbest_plot = plt.scatter([gbest[0,:]], [gbest[1,:]], marker='*', s=100, color='black', alpha=0.4)
 
-print(objective_next)
-print(gbest)
-print(iter)
+# print(objective_next)
+# print(gbest)
+# print(iter)
 
     
 # max_iteration = 100
