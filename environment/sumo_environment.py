@@ -71,7 +71,7 @@ class SumoEnvironment(gym.Env):
         route_file: str,
         cfg_file: str,
         # out_csv_name: str,
-        out_xml_name: str,
+        out_csv_name: str,
         use_gui: bool = False,
         virtual_display: Tuple[int, int] = (3200, 1800), # Tuples are used to store multiple items in a single variable
         begin_time: int = 8*3600,
@@ -188,7 +188,7 @@ class SumoEnvironment(gym.Env):
         self.episode = 0
         self.metrics = []
         # self.out_csv_name = out_csv_name
-        self.out_xml_name = out_xml_name
+        self.out_csv_name = out_csv_name
         self.observations = {ts: None for ts in self.ts_ids}
         self.rewards = {ts: None for ts in self.ts_ids}
 
@@ -239,7 +239,7 @@ class SumoEnvironment(gym.Env):
 
         if self.episode != 0:
             self.close()
-            self.save_xml(self.out_xml_name, self.episode)
+            self.save_csv(self.out_csv_name, self.episode)
         self.episode += 1
         self.metrics = []
 
@@ -450,33 +450,20 @@ class SumoEnvironment(gym.Env):
             img = self.disp.grab()
             return np.array(img)
 
-    # def save_csv(self, out_csv_name, episode):
-    #     """Save metrics of the simulation to a .csv file.
-
-    #     Args:
-    #         out_csv_name (str): Path to the output .csv file. E.g.: "results/my_results
-    #         episode (int): Episode number to be appended to the output file name.
-    #     """
-    #     if out_csv_name is not None:
-    #         df = pd.DataFrame(self.metrics)
-    #         Path(Path(out_csv_name).parent).mkdir(parents=True, exist_ok=True)
-    #         df.to_csv(out_csv_name + f"_conn{self.label}_ep{episode}" + ".csv", index=False)
-    #     return pd.DataFrame(self.metrics)
-    
-    def save_xml(self, out_xml_name, episode):
-        """Save metrics of the simulation to a .xml file.
+    def save_csv(self, out_csv_name, episode):
+        """Save metrics of the simulation to a .csv file.
 
         Args:
-            out_xml_name (str): Path to the output .xml file. E.g.: "results/my_results
+            out_csv_name (str): Path to the output .csv file. E.g.: "results/my_results
             episode (int): Episode number to be appended to the output file name.
         """
-        if out_xml_name is not None:
+        if out_csv_name is not None:
             df = pd.DataFrame(self.metrics)
-            Path(Path(out_xml_name).parent).mkdir(parents=True, exist_ok=True)
-            df.to_csv(out_xml_name + f"_conn{self.label}_ep{episode}" + ".csv", index=False)
+            Path(Path(out_csv_name).parent).mkdir(parents=True, exist_ok=True)
+            df.to_csv(out_csv_name + f"_conn{self.label}_ep{episode}" + ".csv", index=False)
         return pd.DataFrame(self.metrics)
-
-    # Below functions are for discrete state space
+    
+    
 
     def encode(self, state, ts_id):
         """Encode the state of the traffic signal into a hashable object."""

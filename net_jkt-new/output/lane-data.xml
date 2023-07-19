@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2023-07-13 13:18:07 by Eclipse SUMO sumo Version 1.18.0
+<!-- generated on 2023-07-18 23:17:28 by Eclipse SUMO sumo Version 1.18.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
@@ -27,7 +27,7 @@
     </processing>
 
     <traci_server>
-        <remote-port value="63970"/>
+        <remote-port value="55467"/>
     </traci_server>
 
     <random_number>
@@ -39,3 +39,1112 @@
     </gui_only>
 
 </configuration>
+-->
+
+<meandata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/meandata_file.xsd">
+    <interval begin="28800.00" end="28840.00" id="dqn">
+        <edge id="1">
+            <lane id="1_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="1_1" laneDensity="6.55" departed="0" arrived="0" entered="3" left="2"/>
+        </edge>
+        <edge id="10">
+            <lane id="10_0" laneDensity="1.64" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="10_1" laneDensity="1.06" departed="0" arrived="0" entered="2" left="0"/>
+        </edge>
+        <edge id="100">
+            <lane id="100_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="101">
+            <lane id="101_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="102">
+            <lane id="102_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="103[0]">
+            <lane id="103[0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="103[0]_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="103[1].2">
+            <lane id="103[1].2_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="103[1].2_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="104.5">
+            <lane id="104.5_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="104.5_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="105">
+            <lane id="105_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="105_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="106">
+            <lane id="106_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="107">
+            <lane id="107_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="107_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="108">
+            <lane id="108_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="108_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="109">
+            <lane id="109_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="109_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="11">
+            <lane id="11_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="11_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="110">
+            <lane id="110_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="110_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="111">
+            <lane id="111_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="111_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="112[0]">
+            <lane id="112[0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="112[0]_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="112[1]">
+            <lane id="112[1]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="112[1]_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="113[0]">
+            <lane id="113[0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="113[0]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="113[0]_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="113[1][0]">
+            <lane id="113[1][0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="113[1][0]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="113[1][0]_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="114">
+            <lane id="114_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="114_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="115">
+            <lane id="115_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="115_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="116">
+            <lane id="116_0" laneDensity="12.39" departed="20" arrived="0" entered="0" left="3"/>
+            <lane id="116_1" laneDensity="4.95" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="116_2" laneDensity="1.79" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="116_3" laneDensity="3.01" departed="0" arrived="0" entered="0" left="1"/>
+            <lane id="116_4" laneDensity="7.87" departed="0" arrived="0" entered="0" left="3"/>
+        </edge>
+        <edge id="117">
+            <lane id="117_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="117_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="117_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="117_3" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="117_4" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="118">
+            <lane id="118_0" laneDensity="9.12" departed="22" arrived="0" entered="0" left="0"/>
+            <lane id="118_1" laneDensity="5.68" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="119">
+            <lane id="119_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="119_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="12">
+            <lane id="12_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="12_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="12_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="12_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="120.0.24">
+            <lane id="120.0.24_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="120.0.24_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="121">
+            <lane id="121_0" laneDensity="5.10" departed="9" arrived="0" entered="0" left="0"/>
+            <lane id="121_1" laneDensity="1.31" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="122[0]">
+            <lane id="122[0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="122[0]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="122[0]_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="122[1]">
+            <lane id="122[1]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="122[1]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="122[1]_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="123">
+            <lane id="123_0" laneDensity="10.94" departed="23" arrived="0" entered="0" left="0"/>
+            <lane id="123_1" laneDensity="8.36" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="123_2" laneDensity="1.27" departed="0" arrived="0" entered="0" left="1"/>
+        </edge>
+        <edge id="125">
+            <lane id="125_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="125_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="126">
+            <lane id="126_0" laneDensity="3.03" departed="2" arrived="0" entered="0" left="1"/>
+        </edge>
+        <edge id="127">
+            <lane id="127_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="127_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="127_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="128">
+            <lane id="128_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="128_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="129">
+            <lane id="129_0" laneDensity="11.97" departed="13" arrived="0" entered="0" left="3"/>
+            <lane id="129_1" laneDensity="23.39" departed="0" arrived="0" entered="0" left="2"/>
+        </edge>
+        <edge id="13.1">
+            <lane id="13.1_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="13.1_1" laneDensity="0.23" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="13.1_2" laneDensity="0.35" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="13.1_3" laneDensity="0.34" departed="0" arrived="0" entered="1" left="0"/>
+        </edge>
+        <edge id="130">
+            <lane id="130_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="130_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="131">
+            <lane id="131_0" laneDensity="13.02" departed="10" arrived="0" entered="0" left="2"/>
+            <lane id="131_1" laneDensity="8.79" departed="0" arrived="0" entered="0" left="2"/>
+        </edge>
+        <edge id="132">
+            <lane id="132_0" laneDensity="14.40" departed="12" arrived="0" entered="0" left="3"/>
+            <lane id="132_1" laneDensity="11.24" departed="0" arrived="0" entered="0" left="3"/>
+        </edge>
+        <edge id="133">
+            <lane id="133_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="133_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="134.7">
+            <lane id="134.7_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="134.7_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="134.7_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="135.7">
+            <lane id="135.7_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="135.7_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="135.7_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="136">
+            <lane id="136_0" laneDensity="10.24" departed="15" arrived="0" entered="0" left="0"/>
+            <lane id="136_1" laneDensity="15.86" departed="0" arrived="0" entered="0" left="4"/>
+        </edge>
+        <edge id="137.5">
+            <lane id="137.5_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="137.5_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="138">
+            <lane id="138_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="139">
+            <lane id="139_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="14.3">
+            <lane id="14.3_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="14.3_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="140">
+            <lane id="140_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="140_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="140_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="140_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="141">
+            <lane id="141_0" laneDensity="9.14" departed="7" arrived="0" entered="0" left="2"/>
+            <lane id="141_1" laneDensity="0.32" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="142">
+            <lane id="142_0" laneDensity="3.32" departed="10" arrived="0" entered="0" left="0"/>
+            <lane id="142_1" laneDensity="12.51" departed="0" arrived="0" entered="0" left="4"/>
+            <lane id="142_2" laneDensity="2.52" departed="0" arrived="0" entered="0" left="3"/>
+        </edge>
+        <edge id="143.4">
+            <lane id="143.4_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="143.4_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="143.4_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="144">
+            <lane id="144_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="144_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="144_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="144.283">
+            <lane id="144.283_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="144.283_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="144.283_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="144.312">
+            <lane id="144.312_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="144.312_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="144.312_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="145">
+            <lane id="145_0" laneDensity="15.20" departed="7" arrived="0" entered="0" left="3"/>
+            <lane id="145_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="145_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="146">
+            <lane id="146_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="146_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="147">
+            <lane id="147_0" laneDensity="13.75" departed="21" arrived="0" entered="0" left="2"/>
+            <lane id="147_1" laneDensity="13.19" departed="0" arrived="0" entered="0" left="4"/>
+            <lane id="147_2" laneDensity="3.35" departed="0" arrived="0" entered="0" left="3"/>
+        </edge>
+        <edge id="148">
+            <lane id="148_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="148_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="148_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="149">
+            <lane id="149_0" laneDensity="1.22" departed="0" arrived="0" entered="1" left="0"/>
+            <lane id="149_1" laneDensity="1.88" departed="0" arrived="0" entered="3" left="0"/>
+            <lane id="149_2" laneDensity="1.98" departed="0" arrived="0" entered="3" left="0"/>
+        </edge>
+        <edge id="15">
+            <lane id="15_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="15_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="150">
+            <lane id="150_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="150_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="150_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="151">
+            <lane id="151_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="151_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="151_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="151_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="152">
+            <lane id="152_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="152_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="152_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="152_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="153">
+            <lane id="153_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="153_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="153_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="154.7">
+            <lane id="154.7_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="154.7_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="154.7_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="155[0].4">
+            <lane id="155[0].4_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="155[0].4_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="155[0].4_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="155[0].4_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="155[1]">
+            <lane id="155[1]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="155[1]_1" laneDensity="2.01" departed="0" arrived="0" entered="1" left="1"/>
+            <lane id="155[1]_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="155[1]_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="156[0]">
+            <lane id="156[0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="156[0]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="156[0]_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="156[0]_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="156[1]">
+            <lane id="156[1]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="156[1]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="156[1]_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="156[1]_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="157">
+            <lane id="157_0" laneDensity="1.52" departed="0" arrived="0" entered="1" left="0"/>
+            <lane id="157_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="157_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="158">
+            <lane id="158_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="158_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="158_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="16">
+            <lane id="16_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="16_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="161">
+            <lane id="161_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="161_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="163">
+            <lane id="163_0" laneDensity="8.30" departed="2" arrived="0" entered="0" left="1"/>
+        </edge>
+        <edge id="164">
+            <lane id="164_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="165">
+            <lane id="165_0" laneDensity="2.86" departed="3" arrived="0" entered="0" left="1"/>
+            <lane id="165_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="166">
+            <lane id="166_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="166_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="167">
+            <lane id="167_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="167_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="168">
+            <lane id="168_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="168_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="17">
+            <lane id="17_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="17_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="172">
+            <lane id="172_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="173">
+            <lane id="173_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="173_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="175">
+            <lane id="175_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="175_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="18">
+            <lane id="18_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="18_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="181[1][1][0].32.3">
+            <lane id="181[1][1][0].32.3_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][0].32.3_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][0].32.3_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][0].32.3_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="181[1][1][1][0]">
+            <lane id="181[1][1][1][0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][1][0]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][1][0]_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][1][0]_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="181[1][1][1][1][0]">
+            <lane id="181[1][1][1][1][0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][1][1][0]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][1][1][0]_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][1][1][0]_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="181[1][1][1][1][1][0]">
+            <lane id="181[1][1][1][1][1][0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][1][1][1][0]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][1][1][1][0]_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][1][1][1][0]_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="181[1][1][1][1][1][0].76">
+            <lane id="181[1][1][1][1][1][0].76_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][1][1][1][0].76_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][1][1][1][0].76_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="181[1][1][1][1][1][0].76_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="182">
+            <lane id="182_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="182_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="183.8">
+            <lane id="183.8_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="183.8_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="184">
+            <lane id="184_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="184_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="185">
+            <lane id="185_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="186">
+            <lane id="186_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="186_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="187">
+            <lane id="187_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="19">
+            <lane id="19_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="19_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="2">
+            <lane id="2_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="2_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="20">
+            <lane id="20_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="20_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="21">
+            <lane id="21_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="21_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="22">
+            <lane id="22_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="22_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="24">
+            <lane id="24_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="24_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="25[0]">
+            <lane id="25[0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="25[0]_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="25[1]">
+            <lane id="25[1]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="25[1]_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="26">
+            <lane id="26_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="26_1" laneDensity="0.36" departed="0" arrived="0" entered="2" left="0"/>
+        </edge>
+        <edge id="27">
+            <lane id="27_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="27_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="28">
+            <lane id="28_0" laneDensity="0.97" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="28_1" laneDensity="1.42" departed="0" arrived="0" entered="2" left="0"/>
+        </edge>
+        <edge id="29">
+            <lane id="29_0" laneDensity="3.95" departed="0" arrived="0" entered="1" left="0"/>
+            <lane id="29_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="30">
+            <lane id="30_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="30_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="31">
+            <lane id="31_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="31_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="32">
+            <lane id="32_0" laneDensity="0.42" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="32_1" laneDensity="1.14" departed="0" arrived="0" entered="3" left="0"/>
+        </edge>
+        <edge id="33">
+            <lane id="33_0" laneDensity="2.26" departed="0" arrived="0" entered="3" left="0"/>
+            <lane id="33_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="34">
+            <lane id="34_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="34_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="35">
+            <lane id="35_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="35_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="35_2" laneDensity="0.17" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="35_3" laneDensity="0.83" departed="0" arrived="0" entered="2" left="0"/>
+            <lane id="35_4" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="37[0]">
+            <lane id="37[0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="37[0]_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="38.9">
+            <lane id="38.9_0" laneDensity="3.20" departed="0" arrived="0" entered="3" left="0"/>
+            <lane id="38.9_1" laneDensity="0.20" departed="0" arrived="0" entered="1" left="0"/>
+        </edge>
+        <edge id="39.68">
+            <lane id="39.68_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="39.68_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="3[0]">
+            <lane id="3[0]_0" laneDensity="0.69" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="3[0]_1" laneDensity="0.80" departed="0" arrived="0" entered="4" left="0"/>
+            <lane id="3[0]_2" laneDensity="0.52" departed="0" arrived="0" entered="2" left="0"/>
+        </edge>
+        <edge id="3[1]">
+            <lane id="3[1]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="3[1]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="3[1]_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="4">
+            <lane id="4_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="4_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="4_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="40">
+            <lane id="40_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="40_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="40_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="40_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="41.3">
+            <lane id="41.3_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="41.3_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="41.3_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="41.3_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="42.0">
+            <lane id="42.0_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="42.0_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="42.0_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="42.0_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="43[0].45">
+            <lane id="43[0].45_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="43[0].45_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="44">
+            <lane id="44_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="44_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="44_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="45[0].5">
+            <lane id="45[0].5_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="45[0].5_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="45[1]">
+            <lane id="45[1]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="45[1]_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="46">
+            <lane id="46_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="46_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="47">
+            <lane id="47_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="47_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="48">
+            <lane id="48_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="48_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="48_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="49[0]">
+            <lane id="49[0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="49[0]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="49[0]_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="49[1]">
+            <lane id="49[1]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="49[1]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="49[1]_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="5">
+            <lane id="5_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="5_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="50[0].15">
+            <lane id="50[0].15_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="50[0].15_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="50[1]">
+            <lane id="50[1]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="50[1]_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="51">
+            <lane id="51_0" laneDensity="2.96" departed="2" arrived="0" entered="0" left="0"/>
+            <lane id="51_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="52">
+            <lane id="52_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="52_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="52_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="53.4">
+            <lane id="53.4_0" laneDensity="1.13" departed="0" arrived="0" entered="0" left="1"/>
+            <lane id="53.4_1" laneDensity="1.54" departed="0" arrived="0" entered="2" left="0"/>
+            <lane id="53.4_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="54[0]">
+            <lane id="54[0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="54[0]_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="54[1]">
+            <lane id="54[1]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="54[1]_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="55[0]">
+            <lane id="55[0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="55[0]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="55[0]_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="55[1]">
+            <lane id="55[1]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="55[1]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="55[1]_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="56.0.16">
+            <lane id="56.0.16_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="56.0.16_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="57">
+            <lane id="57_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="57_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="58">
+            <lane id="58_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="58_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="59">
+            <lane id="59_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="59_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="59_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="6">
+            <lane id="6_0" laneDensity="1.73" departed="0" arrived="0" entered="2" left="0"/>
+            <lane id="6_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="6_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="6_3" laneDensity="0.49" departed="0" arrived="0" entered="1" left="0"/>
+            <lane id="6_4" laneDensity="0.46" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="60">
+            <lane id="60_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="61">
+            <lane id="61_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="61_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="62">
+            <lane id="62_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="63">
+            <lane id="63_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="64">
+            <lane id="64_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="66.10">
+            <lane id="66.10_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="66.10_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="67.1">
+            <lane id="67.1_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="67.1_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="68">
+            <lane id="68_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="68_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="69">
+            <lane id="69_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="69_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="7.0.20">
+            <lane id="7.0.20_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="7.0.20_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="7.0.20_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="7.0.20_3" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="7.0.20_4" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="70">
+            <lane id="70_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="71">
+            <lane id="71_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="72">
+            <lane id="72_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="73">
+            <lane id="73_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="73_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="74">
+            <lane id="74_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="74_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="75">
+            <lane id="75_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="75_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="75_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="76">
+            <lane id="76_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="76_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="77">
+            <lane id="77_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="77_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="78">
+            <lane id="78_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="78_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="79">
+            <lane id="79_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="79_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="8.0.2.13">
+            <lane id="8.0.2.13_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="8.0.2.13_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="8.0.2.13_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="8.0.2.13_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="80">
+            <lane id="80_0" laneDensity="0.34" departed="0" arrived="0" entered="1" left="0"/>
+            <lane id="80_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="81">
+            <lane id="81_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="81_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="81_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="82">
+            <lane id="82_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="82_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="82_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="83">
+            <lane id="83_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="83_1" laneDensity="1.81" departed="0" arrived="0" entered="1" left="1"/>
+            <lane id="83_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="84">
+            <lane id="84_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="84_1" laneDensity="1.66" departed="0" arrived="0" entered="1" left="1"/>
+            <lane id="84_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="85">
+            <lane id="85_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="85_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="85_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="86[0]">
+            <lane id="86[0]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="86[0]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="86[0]_2" laneDensity="1.83" departed="0" arrived="0" entered="1" left="1"/>
+        </edge>
+        <edge id="86[1][1]">
+            <lane id="86[1][1]_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="86[1][1]_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="86[1][1]_2" laneDensity="1.49" departed="0" arrived="0" entered="1" left="0"/>
+        </edge>
+        <edge id="87">
+            <lane id="87_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="87_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="88">
+            <lane id="88_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="88_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="9">
+            <lane id="9_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="9_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="9_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="9_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="90">
+            <lane id="90_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="90_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="91">
+            <lane id="91_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="91_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="92">
+            <lane id="92_0" laneDensity="1.79" departed="0" arrived="0" entered="2" left="0"/>
+            <lane id="92_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="93">
+            <lane id="93_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="93_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="93_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="94">
+            <lane id="94_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="94_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="94_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="95">
+            <lane id="95_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="95_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="96">
+            <lane id="96_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="96_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="97">
+            <lane id="97_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="97_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="98">
+            <lane id="98_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="98_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="99">
+            <lane id="99_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E0">
+            <lane id="E0_0" laneDensity="18.73" departed="20" arrived="0" entered="0" left="3"/>
+            <lane id="E0_1" laneDensity="18.46" departed="0" arrived="0" entered="0" left="3"/>
+            <lane id="E0_2" laneDensity="10.06" departed="0" arrived="0" entered="0" left="3"/>
+        </edge>
+        <edge id="E0.221">
+            <lane id="E0.221_0" laneDensity="0.62" departed="0" arrived="0" entered="1" left="0"/>
+            <lane id="E0.221_1" laneDensity="0.95" departed="0" arrived="0" entered="1" left="0"/>
+        </edge>
+        <edge id="E1">
+            <lane id="E1_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="E1_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E10">
+            <lane id="E10_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="E10_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E11">
+            <lane id="E11_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="E11_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E12">
+            <lane id="E12_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="E12_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E13">
+            <lane id="E13_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="E13_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E15">
+            <lane id="E15_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E18">
+            <lane id="E18_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="E18_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E19">
+            <lane id="E19_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="E19_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="E19_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E2">
+            <lane id="E2_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="E2_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E2.444">
+            <lane id="E2.444_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="E2.444_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E20">
+            <lane id="E20_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E21">
+            <lane id="E21_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E3">
+            <lane id="E3_0" laneDensity="9.84" departed="22" arrived="0" entered="0" left="0"/>
+            <lane id="E3_1" laneDensity="5.34" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E4.10">
+            <lane id="E4.10_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E4.24">
+            <lane id="E4.24_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E5">
+            <lane id="E5_0" laneDensity="2.45" departed="0" arrived="0" entered="1" left="1"/>
+            <lane id="E5_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E6">
+            <lane id="E6_0" laneDensity="183.44" departed="0" arrived="0" entered="2" left="2"/>
+            <lane id="E6_1" laneDensity="60.23" departed="0" arrived="0" entered="3" left="3"/>
+            <lane id="E6_2" laneDensity="36.47" departed="0" arrived="0" entered="2" left="2"/>
+        </edge>
+        <edge id="E7.29">
+            <lane id="E7.29_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E7.9">
+            <lane id="E7.9_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E8">
+            <lane id="E8_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="E8_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="E8.39">
+            <lane id="E8.39_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE10">
+            <lane id="gneE10_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE10_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE10_2" laneDensity="3.39" departed="0" arrived="0" entered="1" left="1"/>
+        </edge>
+        <edge id="gneE126">
+            <lane id="gneE126_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE126_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE138">
+            <lane id="gneE138_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE138_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE138_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE140">
+            <lane id="gneE140_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE140_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE141">
+            <lane id="gneE141_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE141_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE142">
+            <lane id="gneE142_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE142_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE143">
+            <lane id="gneE143_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE143_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE144">
+            <lane id="gneE144_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE147">
+            <lane id="gneE147_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE148">
+            <lane id="gneE148_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE148_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE148_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE150">
+            <lane id="gneE150_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE150_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE151">
+            <lane id="gneE151_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE151_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE153">
+            <lane id="gneE153_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE153_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE153_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE154">
+            <lane id="gneE154_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE154_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE155">
+            <lane id="gneE155_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE156">
+            <lane id="gneE156_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE157">
+            <lane id="gneE157_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE158">
+            <lane id="gneE158_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE159">
+            <lane id="gneE159_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE159_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE159_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE159_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE160">
+            <lane id="gneE160_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE160_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE160_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE160_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE188">
+            <lane id="gneE188_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE188_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE190">
+            <lane id="gneE190_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE190_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE199">
+            <lane id="gneE199_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE199_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE202">
+            <lane id="gneE202_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE202_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE203">
+            <lane id="gneE203_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE205">
+            <lane id="gneE205_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE208">
+            <lane id="gneE208_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE208_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE22">
+            <lane id="gneE22_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE22_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE22_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE22_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE224">
+            <lane id="gneE224_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE226">
+            <lane id="gneE226_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE226_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE226_2" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE227">
+            <lane id="gneE227_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE228">
+            <lane id="gneE228_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE23">
+            <lane id="gneE23_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE23_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE230">
+            <lane id="gneE230_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE231">
+            <lane id="gneE231_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE231_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE233">
+            <lane id="gneE233_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE251">
+            <lane id="gneE251_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE251_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE257">
+            <lane id="gneE257_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE257_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE258">
+            <lane id="gneE258_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE258_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE271">
+            <lane id="gneE271_0" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE393">
+            <lane id="gneE393_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE393_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE394">
+            <lane id="gneE394_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE394_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE396">
+            <lane id="gneE396_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE396_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE397">
+            <lane id="gneE397_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE397_1" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+        <edge id="gneE401">
+            <lane id="gneE401_0" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE401_1" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE401_2" departed="0" arrived="0" entered="0" left="0"/>
+            <lane id="gneE401_3" departed="0" arrived="0" entered="0" left="0"/>
+        </edge>
+    </interval>
+</meandata>
