@@ -393,8 +393,8 @@ class SumoEnvironment(gym.Env):
             'total_stopped': sum(self.traffic_signals[ts].get_total_queued() for ts in self.ts_ids),
             #'total_wait_time': sum(sum(self.traffic_signals[ts].get_waiting_time_per_lane()) for ts in self.ts_ids),
             #'total_pressure': sum(self.traffic_signals[ts].get_pressure() for ts in self.ts_ids),
-            'total_pressure2' : sum(self.traffic_signals[ts].get_pressure2() for ts in self.ts_ids),
-            #'total_exponential_reward' : sum(self.traffic_signals[ts].exponential_reward() for ts in self.ts_ids)
+            #'total_pressure2' : sum(self.traffic_signals[ts].get_pressure2() for ts in self.ts_ids),
+            'total_exponential_reward' : sum(self.traffic_signals[ts].exponential_reward() for ts in self.ts_ids),
             "system_total_stopped": sum(int(speed < 0.1) for speed in speeds),
             "system_total_waiting_time": sum(waiting_times),
             "system_mean_waiting_time": 0.0 if len(vehicles) == 0 else np.mean(waiting_times),

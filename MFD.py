@@ -120,5 +120,4 @@ def MFD():
     return Qpeak, Kpeak, Qgridlock, Kgridlock
 
 
-Qpeak, Kpeak, Qgridlock, Kgridlock = MFD()
-print(Qpeak, Kpeak, Qgridlock, Kgridlock)
+

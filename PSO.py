@@ -4,19 +4,18 @@ from Simulasi import simulasi
 from Objective import objective_function
 from MFD import MFD
 
-beta = 0.0027
-density = 25
+
 time_start = 8
-time_end = 8.01
+time_end = 9
 runs = 1
 
-max_iteration = 100
+max_iteration = 3
 error_max = 0.01
 #Nilai c1,c2, dan W divariasikan hingga menghasilkan hasil yang paling optimal
 c1 = 0.1 # cognitif parameter
 c2 = 0.1 # social coefficient
 W = 0.8 # weight
-jumlah_partikel = 20
+jumlah_partikel = 10
 
 # random x1 x2 sesuai jumlah partikel
 x1 = 5*np.random.rand(1,jumlah_partikel)[0]
@@ -51,7 +50,7 @@ while True:
 	x2_next = x_next[1,:]
 	for i in range(jumlah_partikel):
 		# objective_next[i] = validasi(beta=0.5, density=0.1, time_start=x1_next[i], time_end=x2_next[i])
-		simulasi(beta=[i],density=[i], time_start=time_start, time_end=time_end) #nanti x1 x2 diganti beta sama density
+		simulasi(beta=x1_next[i],density=x2_next[i], time_start=time_start, time_end=time_end) #nanti x1 x2 diganti beta sama density
 		Qpeak, Kpeak, Qgridlock, Kgridlock = MFD()
 		objective_next[i] = objective_function(Qpeak, Kpeak, Qgridlock, Kgridlock)
 
