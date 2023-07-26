@@ -6,7 +6,7 @@ from MFD import MFD
 
 
 time_start = 8
-time_end = 9
+time_end = 8.01
 runs = 1
 
 max_iteration = 3

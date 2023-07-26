@@ -117,7 +117,6 @@ def MFD():
     Kpeak = Kn[np.argmax(Qpeak)]
     Qgridlock = np.max(Kn) # Nilai ini diambil dari titik paling kanan di mfd
     Kgridlock = Qn[np.argmax(Qgridlock)]
-    return Qpeak, Kpeak, Qgridlock, Kgridlock
 
 
 
