@@ -8,7 +8,7 @@ def get_data_group(df_flow_and_density): #grouping data to pandas object
 
     #only for get a list of 'time' in mfd-data.csv
     flowdensity_lane = flowdensity.groupby('lane_ids')
-    dummy_group = flowdensity_lane.get_group('1_0')
+    dummy_group = flowdensity_lane.get_group('1_1')
     time_list = dummy_group['time']
 
     #real grouping (group by time)
@@ -110,7 +110,7 @@ def MFD():
     df = df.dropna()
 
     time_list, flowdensity_time = get_data_group(df)
-    Qn, Kn = get_MFD_property(time_list,flowdensity_time,total_lane_length,lane_length_dict)
+    Qn, Kn = get_MFD_property(time_list, flowdensity_time,total_lane_length,lane_length_dict)
 
     # Qpeak itu nilai maks sumbu y dari MFD tapi dari sumbu y itu yang dipake sumbu x nya, Q gridlock itu nilai maks sumbu x dari MFD, 
     Qpeak = np.max(Qn) #di dalem kurung itu nilai maksimum dari mfd
@@ -118,5 +118,5 @@ def MFD():
     Qgridlock = np.max(Kn) # Nilai ini diambil dari titik paling kanan di mfd
     Kgridlock = Qn[np.argmax(Qgridlock)]
 
-
+    return Qpeak, Kpeak, Qgridlock, Kgridlock
 

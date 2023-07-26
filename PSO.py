@@ -4,7 +4,6 @@ from Simulasi import simulasi
 from Objective import objective_function
 from MFD import MFD
 
-
 time_start = 8
 time_end = 8.01
 runs = 1
@@ -53,8 +52,6 @@ while True:
 		simulasi(beta=x1_next[i],density=x2_next[i], time_start=time_start, time_end=time_end) #nanti x1 x2 diganti beta sama density
 		Qpeak, Kpeak, Qgridlock, Kgridlock = MFD()
 		objective_next[i] = objective_function(Qpeak, Kpeak, Qgridlock, Kgridlock)
-
-    
 
 	#objective_next = (x1_next-3.14)**2 + (x2_next-2.72)**2 + np.sin(3*x1_next+1.41) + np.sin(4*x2_next-1.73)
 	
