@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2023-07-26 18:25:25 by Eclipse SUMO sumo Version 1.11.0
+<!-- generated on 2023-07-27 15:24:38 by Eclipse SUMO sumo Version 1.11.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
@@ -27,7 +27,7 @@
     </processing>
 
     <traci_server>
-        <remote-port value="59907"/>
+        <remote-port value="62017"/>
     </traci_server>
 
     <random_number>
@@ -39,47 +39,3 @@
     </gui_only>
 
 </configuration>
--->
-
-<tlsStates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tlsstates_file.xsd">
-    <tlsState time="28800.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28801.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28802.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28803.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28804.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28805.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28806.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28807.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28808.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28809.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28810.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28811.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28812.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28813.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28814.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28815.00" id="tl_9" programID="online" phase="0" state="rrrrrryyyrrrr"/>
-    <tlsState time="28816.00" id="tl_9" programID="online" phase="0" state="rrrrrryyyrrrr"/>
-    <tlsState time="28817.00" id="tl_9" programID="online" phase="0" state="GGgrrrrrrrrrr"/>
-    <tlsState time="28818.00" id="tl_9" programID="online" phase="0" state="GGgrrrrrrrrrr"/>
-    <tlsState time="28819.00" id="tl_9" programID="online" phase="0" state="GGgrrrrrrrrrr"/>
-    <tlsState time="28820.00" id="tl_9" programID="online" phase="0" state="GGgrrrrrrrrrr"/>
-    <tlsState time="28821.00" id="tl_9" programID="online" phase="0" state="GGgrrrrrrrrrr"/>
-    <tlsState time="28822.00" id="tl_9" programID="online" phase="0" state="GGgrrrrrrrrrr"/>
-    <tlsState time="28823.00" id="tl_9" programID="online" phase="0" state="GGgrrrrrrrrrr"/>
-    <tlsState time="28824.00" id="tl_9" programID="online" phase="0" state="GGgrrrrrrrrrr"/>
-    <tlsState time="28825.00" id="tl_9" programID="online" phase="0" state="yyyrrrrrrrrrr"/>
-    <tlsState time="28826.00" id="tl_9" programID="online" phase="0" state="yyyrrrrrrrrrr"/>
-    <tlsState time="28827.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28828.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28829.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28830.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28831.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28832.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28833.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28834.00" id="tl_9" programID="online" phase="0" state="rrrrrrGGGrrrr"/>
-    <tlsState time="28835.00" id="tl_9" programID="online" phase="0" state="rrrrrryyyrrrr"/>
-    <tlsState time="28836.00" id="tl_9" programID="online" phase="0" state="rrrrrryyyrrrr"/>
-    <tlsState time="28837.00" id="tl_9" programID="online" phase="0" state="rrrgGGrrrggGG"/>
-    <tlsState time="28838.00" id="tl_9" programID="online" phase="0" state="rrrgGGrrrggGG"/>
-    <tlsState time="28839.00" id="tl_9" programID="online" phase="0" state="rrrgGGrrrggGG"/>
-</tlsStates>
