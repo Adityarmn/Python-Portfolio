@@ -72,7 +72,7 @@ class SumoEnvironment(gym.Env):
         cfg_file: str,
         # out_csv_name: str,
         out_csv_name: str,
-        use_gui: bool = False,
+        use_gui: bool = True,
         virtual_display: Tuple[int, int] = (3200, 1800), # Tuples are used to store multiple items in a single variable
         begin_time: int = 8*3600,
         num_seconds: int = 9*3600,

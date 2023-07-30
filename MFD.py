@@ -123,11 +123,11 @@ def MFD():
     Qn, Kn = get_MFD_property(
         time_list, flowdensity_time, total_lane_length, lane_length_dict
     )
-
+    
     # Qpeak itu nilai maks sumbu y dari MFD tapi dari sumbu y itu yang dipake sumbu x nya, Q gridlock itu nilai maks sumbu x dari MFD,
     Qpeak = np.max(Qn)  # di dalem kurung itu nilai maksimum dari mfd
-    Kpeak = Kn[np.argmax(Qpeak)]
+    Kpeak = Kn[np.argmax(Qn)]
     Qgridlock = np.max(Kn)  # Nilai ini diambil dari titik paling kanan di mfd
-    Kgridlock = Qn[np.argmax(Qgridlock)]
+    Kgridlock = Qn[np.argmax(Kn)]
 
     return Qpeak, Kpeak, Qgridlock, Kgridlock
