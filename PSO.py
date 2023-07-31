@@ -6,7 +6,7 @@ from MFD import MFD
 from csv import writer
 
 time_start = 8
-time_end = 8.01
+time_end = 10
 runs = 1
 
 
@@ -59,7 +59,7 @@ while True:
             time_start=time_start,
             time_end=time_end,
         )  # nanti x1 x2 diganti beta sama density
-        Qpeak, Kpeak, Qgridlock, Kgridlock = MFD()
+        Qpeak, Kpeak, Qgridlock, Kgridlock = MFD(iter, i)
         objective_next[i] = objective_function(Qpeak, Kpeak, Qgridlock, Kgridlock)
         data_list = [
             iter,

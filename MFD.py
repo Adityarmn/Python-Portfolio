@@ -60,7 +60,7 @@ def get_lane_length(df_lanelength):  # get lane length information
     return lane_length
 
 
-def MFD():
+def MFD(iterasi, partikel):
     # Bikin program buat ngitung Ppeak Xpeak Pgridlock Xgridlock
     # 1. Load data XML pakai pandas read_xml dari folder net_jkt-new/output/lane-data
     # 2. Bikin MFD jadi data Kn Qn (flow banding density)
@@ -123,6 +123,10 @@ def MFD():
     Qn, Kn = get_MFD_property(
         time_list, flowdensity_time, total_lane_length, lane_length_dict
     )
+    
+    file_MFD = f"MFD_iter_{iterasi}_partikel_{partikel}.csv"
+    data_MFD = pd.DataFrame(Qn, Kn)
+    data_MFD.to_csv(file_MFD)
 
     # Qpeak itu nilai maks sumbu y dari MFD tapi dari sumbu y itu yang dipake sumbu x nya, Q gridlock itu nilai maks sumbu x dari MFD,
     Qpeak = np.max(Qn)  # di dalem kurung itu nilai maksimum dari mfd
