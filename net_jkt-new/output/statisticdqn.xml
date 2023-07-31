@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<<<<<<< HEAD
 <!-- generated on 2023-07-28 15:55:21 by Eclipse SUMO sumo Version 1.10.0
+=======
+<!-- generated on 2023-07-29 17:05:33 by Eclipse SUMO GUI Version 1.11.0
+>>>>>>> 449d1df253145ec07bd59f0ec0b7430c30e8105f
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
@@ -16,7 +20,7 @@
     </output>
 
     <time>
-        <begin value=" 28800"/>
+        <begin value=" 25200"/>
         <end value="82800"/>
     </time>
 
@@ -27,7 +31,11 @@
     </processing>
 
     <traci_server>
+<<<<<<< HEAD
         <remote-port value="61378"/>
+=======
+        <remote-port value="50454"/>
+>>>>>>> 449d1df253145ec07bd59f0ec0b7430c30e8105f
     </traci_server>
 
     <random_number>
@@ -36,6 +44,8 @@
 
     <gui_only>
         <gui-settings-file value="net_jkt-new/guisettings.cfg"/>
+        <quit-on-end value="true"/>
+        <start value="true"/>
     </gui_only>
 
 </configuration>

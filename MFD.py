@@ -124,14 +124,17 @@ def MFD(iterasi, partikel):
         time_list, flowdensity_time, total_lane_length, lane_length_dict
     )
     
+<<<<<<< HEAD
     file_MFD = f"MFD_iter_{iterasi}_partikel_{partikel}.csv"
     data_MFD = pd.DataFrame(Qn, Kn)
     data_MFD.to_csv(file_MFD)
 
+=======
+>>>>>>> 449d1df253145ec07bd59f0ec0b7430c30e8105f
     # Qpeak itu nilai maks sumbu y dari MFD tapi dari sumbu y itu yang dipake sumbu x nya, Q gridlock itu nilai maks sumbu x dari MFD,
     Qpeak = np.max(Qn)  # di dalem kurung itu nilai maksimum dari mfd
-    Kpeak = Kn[np.argmax(Qpeak)]
+    Kpeak = Kn[np.argmax(Qn)]
     Qgridlock = np.max(Kn)  # Nilai ini diambil dari titik paling kanan di mfd
-    Kgridlock = Qn[np.argmax(Qgridlock)]
+    Kgridlock = Qn[np.argmax(Kn)]
 
     return Qpeak, Kpeak, Qgridlock, Kgridlock
