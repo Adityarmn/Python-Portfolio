@@ -2,3 +2,4 @@
 .vscode
 __pycache__
 net_jkt-new
+.DS_Store
